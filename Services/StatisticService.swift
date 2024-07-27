@@ -2,6 +2,7 @@ import Foundation
 
 final class StatisticService: StatisticServiceProtocol {
     
+    // общее количество игр
     var gamesCount: Int {
         get {
             let gamesCount = storage.integer(forKey: Keys.gamesCount.rawValue)
@@ -12,6 +13,7 @@ final class StatisticService: StatisticServiceProtocol {
         }
     }
     
+    // лучший результат
     var bestGame: GameResult {
         get {
             let correct = storage.integer(forKey: Keys.correct.rawValue)
